@@ -22,7 +22,7 @@ var twoSum = (nums, target) => {
   for (let num = 0; num < nums.length; num += 1) {
     if (Object.prototype.hasOwnProperty.call(complement, nums[num])) {
       // If complement found, return the position of that number and current position
-      return [parseInt(complement[nums[num]]), parseInt(num)]
+      return [complement[nums[num]], num]
     }
     complement[target - nums[num]] = num
   }
